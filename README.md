@@ -219,23 +219,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 📸 Screenshots
 
-### Main Dashboard
-
-![Main Dashboard](docs/screenshots/main-dashboard.png)
-
-### Employee Management
-
-![Employee Management](docs/screenshots/employee-management.png)
-
-### Project Overview
-
-![Project Overview](docs/screenshots/project-overview.png)
-
-### Task Management
-
-![Task Management](docs/screenshots/task-management.png)
 
 ## 🚀 Deployment
 
@@ -249,14 +233,7 @@ dotnet publish -c Release -o ./publish
 dotnet build --configuration Release
 ```
 
-### CI/CD Pipeline
 
-This project includes GitHub Actions workflows for:
-
-- **Continuous Integration**: Automated building and testing
-- **Code Quality**: SonarQube analysis and code coverage
-- **Security Scanning**: Dependency vulnerability checks
-- **Automated Releases**: Semantic versioning and release automation
 
 ---
 
