@@ -1,4 +1,4 @@
-# 🏢 Enterprise Worker Management System
+# 🏢 Enterprise Worker Management System- BİL309 Database Management System Project
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/)
 [![Entity Framework](https://img.shields.io/badge/Entity%20Framework-8.0-green.svg)](https://docs.microsoft.com/en-us/ef/)
