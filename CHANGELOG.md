@@ -5,86 +5,14 @@ All notable changes to the Worker Management System will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
 
-### Planned Features
-
-- Web-based dashboard interface
-- Advanced reporting and analytics
-- Mobile application support
-- Real-time notifications
-
-## [1.1.0] - 2025-06-14
+## [1.1.0] 
 
 ### Added
 
 - Simplified project structure for better maintainability
 - Enhanced documentation with focus on core functionality
 
-### Removed
-
-- Complex DevOps tooling (Docker, CI/CD workflows)
-- SonarQube configuration for code quality
-- Unit testing project for simplified codebase
-- Configuration files (appsettings.json)
-
-### Changed
-
-- Simplified Program.cs with direct service instantiation
-- Focus on core business functionality over complex infrastructure
-
-## [1.0.0] - 2025-06-14
-
-### Added
-
-- **Core Features**
-  - Complete employee management system (CRUD operations)
-  - Project lifecycle management with timeline tracking
-  - Task management with status tracking and assignment
-  - Employee-project relationship management
-  - Performance analytics and reporting
-
-- **Technical Architecture**
-  - .NET 8.0 Windows Forms application
-  - Entity Framework Core 8.0 with Code First approach
-  - SQL Server / LocalDB database support
-  - Service layer architecture with dependency injection
-  - Comprehensive error handling and logging
-
-- **User Interface**
-  - Modern Windows Forms interface
-  - Dynamic theme color system
-  - Responsive design patterns
-  - Professional DataGridView implementations
-  - Intuitive navigation and user experience
-
-- **Data Management**
-  - Employee records with performance tracking
-  - Project management with delay calculations
-  - Task assignment and status monitoring
-  - Man-day calculation system
-  - Automated performance metrics
-
-- **Quality Assurance**
-  - Comprehensive unit test suite using NUnit
-  - Integration tests for database operations
-  - Code coverage reporting
-  - SonarQube integration for code quality
-  - Automated CI/CD pipeline with GitHub Actions
-
-- **DevOps & Deployment**
-  - Docker containerization support
-  - Docker Compose for development environment
-  - Production deployment guides
-  - Database migration scripts
-  - Automated backup strategies
-
-- **Documentation**
-  - Comprehensive README with setup instructions
-  - API documentation for service layer
-  - Deployment and configuration guides
-  - Contributing guidelines
-  - Code style and formatting standards
 
 ### Technical Specifications
 
@@ -93,7 +21,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Testing**: NUnit 4.0.1 with Moq for mocking
 - **Architecture**: Service layer pattern with dependency injection
 - **Design Patterns**: Repository pattern, Factory pattern, MVVM principles
-
 ### Database Schema
 
 - **Employees Table** (Calisanlar): Employee management with performance tracking
@@ -113,35 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Error Handling**: Comprehensive exception management, secure error messages
 - **Data Validation**: Input validation, business rule enforcement
 
-### Development Tools
-
-- **Code Quality**: EditorConfig for consistent formatting, SonarQube analysis
-- **Version Control**: Comprehensive .gitignore, proper Git workflow
-- **CI/CD**: GitHub Actions for automated testing and deployment
-- **Documentation**: XML documentation comments, API reference generation
-
-## [0.9.0] - 2024-01-11 (Pre-release)
-
-### Added
-
-- Initial database migrations
-- Basic CRUD operations for employees
-- Project management foundation
-- Task assignment functionality
-
-### Fixed
-
-- Database connection issues
-- Migration script errors
-- UI rendering problems
-
-## [0.5.0] - 2024-01-09 (Alpha)
-
-### Added
-
-- Project-employee relationship modeling
-- Task management system
-- Basic reporting features
 
 ## [0.1.0] - 2023-12-31 (Initial Release)
 
