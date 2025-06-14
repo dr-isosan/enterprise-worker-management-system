@@ -1,7 +1,4 @@
 
-
-*This project demonstrates professional-level software development practices including clean architecture, comprehensive testing, modern UI design, and enterprise-grade code quality.*
-=======
 # 🏢 Enterprise Worker Management System- BİL309 Database Management System Project
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/)
