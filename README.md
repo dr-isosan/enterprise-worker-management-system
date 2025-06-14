@@ -258,16 +258,6 @@ This project includes GitHub Actions workflows for:
 - **Security Scanning**: Dependency vulnerability checks
 - **Automated Releases**: Semantic versioning and release automation
 
-## 📞 Contact & Support
-
-**Project Maintainer**: [@yourusername](https://github.com/yourusername)
-
-**Project Repository**: [https://github.com/yourusername/worker-management-system](https://github.com/yourusername/worker-management-system)
-
-**Documentation**: [Wiki](https://github.com/yourusername/worker-management-system/wiki)
-
-**Bug Reports**: [Issues](https://github.com/yourusername/worker-management-system/issues)
-
 ---
 
 ⭐ **If you found this project helpful, please consider giving it a star!**
