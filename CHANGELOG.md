@@ -17,16 +17,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2025-06-14
 
 ### Added
+
 - Simplified project structure for better maintainability
 - Enhanced documentation with focus on core functionality
 
 ### Removed
+
 - Complex DevOps tooling (Docker, CI/CD workflows)
 - SonarQube configuration for code quality
 - Unit testing project for simplified codebase
 - Configuration files (appsettings.json)
 
 ### Changed
+
 - Simplified Program.cs with direct service instantiation
 - Focus on core business functionality over complex infrastructure
 

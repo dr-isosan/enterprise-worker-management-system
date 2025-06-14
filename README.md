@@ -119,8 +119,6 @@ WorkerApp/
    dotnet run --project WorkerApp
    ```
 
-
-
 ## 📊 Database Schema
 
 ### Core Tables
