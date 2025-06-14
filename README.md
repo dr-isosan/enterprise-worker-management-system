@@ -123,15 +123,7 @@ WorkerApp/
    dotnet run --project WorkerApp
    ```
 
-### Docker Setup (Alternative)
 
-```bash
-# Build the Docker image
-docker build -t worker-management-system .
-
-# Run with Docker Compose
-docker-compose up -d
-```
 
 ## 📊 Database Schema
 
@@ -191,20 +183,6 @@ public static readonly List<string> ColorList = new List<string>()
 };
 ```
 
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-# Run all tests
-dotnet test
-
-# Run with coverage
-dotnet test --collect:"XPlat Code Coverage"
-
-# Run specific test project
-dotnet test WorkerApp.Tests
-```
 
 ## 🤝 Contributing
 
@@ -222,17 +200,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 
 
-## 🚀 Deployment
 
-### Production Deployment
-
-```bash
-# Publish for production
-dotnet publish -c Release -o ./publish
-
-# Create installer (requires WiX Toolset)
-dotnet build --configuration Release
-```
 
 
 
