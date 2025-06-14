@@ -56,8 +56,7 @@ A **professional-grade Employee and Project Management System** built with moder
 - **ORM:** Entity Framework Core 8.0
 - **Database:** SQL Server / LocalDB
 - **Architecture:** Code First Approach with Repository Pattern
-- **Design Patterns:** MVVM, Dependency Injection, Factory Pattern
-- **Testing:** NUnit, Moq, Entity Framework In-Memory Provider
+
 
 ## 📁 Project Architecture
 
@@ -73,7 +72,6 @@ WorkerApp/
 ├── 📁 DBAccess/               # Data access layer
 ├── 📁 Services/               # Business logic services
 ├── 📁 Forms/                  # UI Forms
-├── 📁 Tests/                  # Unit and integration tests
 ├── 📁 Properties/             # Application resources
 ├── Form1.cs                   # Main form
 ├── Program.cs                 # Application entry point
