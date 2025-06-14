@@ -78,24 +78,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 3. Update any custom code to use new service interfaces
 4. Run database migrations: `dotnet ef database update`
 
-## Known Issues
-
-### Current Limitations
-
-- Windows-only application (planned: cross-platform support)
-- Single-user application (planned: multi-user support)
-- Basic reporting (planned: advanced analytics)
-
-### Workarounds
-
-- For multi-user scenarios, use shared database with proper access controls
-- For advanced reporting, export data to Excel or BI tools
-
-## Support and Maintenance
-
-- **LTS Support**: Version 1.0.0 will receive security updates for 24 months
-- **Bug Fixes**: Critical bugs will be patched within 7 days
-- **Feature Updates**: Minor releases every 3 months, major releases annually
+## Limitations
+- Windows-only application 
+- Single-user application
+- Basic reporting 
 
 ## Contributor Recognition
 
@@ -108,4 +94,3 @@ Special thanks to all contributors who helped make this project professional-gra
 
 ---
 
-*For technical support or feature requests, please visit our [GitHub Issues](https://github.com/yourusername/worker-management-system/issues) page.*
