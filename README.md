@@ -57,9 +57,8 @@ A **professional-grade Employee and Project Management System** built with moder
 - **Framework:** .NET 8.0 Windows Forms
 - **ORM:** Entity Framework Core 8.0
 - **Database:** SQL Server / LocalDB
-- **Architecture:** Code First Approach with Repository Pattern
-- **Design Patterns:** MVVM, Dependency Injection, Factory Pattern
-- **Testing:** NUnit, Moq, Entity Framework In-Memory Provider
+- **Architecture:** Code First Approach with Service Layer Pattern
+- **Design Patterns:** Dependency Injection, Repository Pattern
 
 ## 📁 Project Architecture
 
@@ -74,8 +73,6 @@ WorkerApp/
 ├── 📁 Migrations/              # Entity Framework migrations
 ├── 📁 DBAccess/               # Data access layer
 ├── 📁 Services/               # Business logic services
-├── 📁 Forms/                  # UI Forms
-├── 📁 Tests/                  # Unit and integration tests
 ├── 📁 Properties/             # Application resources
 ├── Form1.cs                   # Main form
 ├── Program.cs                 # Application entry point
@@ -122,15 +119,7 @@ WorkerApp/
    dotnet run --project WorkerApp
    ```
 
-### Docker Setup (Alternative)
 
-```bash
-# Build the Docker image
-docker build -t worker-management-system .
-
-# Run with Docker Compose
-docker-compose up -d
-```
 
 ## 📊 Database Schema
 

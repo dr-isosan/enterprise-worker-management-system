@@ -6,7 +6,7 @@ GitHub'da repository oluşturduktan sonra bu komutları çalıştır:
 
 ```bash
 cd /home/dr_iso/VTYS-project-main
-git remote add origin https://github.com/KULLANICI_ADIN/enterprise-worker-management-system.git
+git remote add origin https://github.com/KULLANICI_ADIN/worker-management-system.git
 ```
 
 ## 2. Kodu GitHub'a push et
@@ -18,37 +18,33 @@ git push -u origin main
 ## 3. İlk release oluştur
 
 ```bash
-git tag -a v1.0.0 -m "🎉 Enterprise Worker Management System v1.0.0
+git tag -a v1.1.0 -m "🎉 Worker Management System v1.1.0
 
-✨ Initial Release Features:
+✨ Simplified Professional Release:
 - Complete employee and project management system
-- Modern .NET 8.0 architecture with service layer
-- Comprehensive testing suite (90%+ coverage)
-- Docker containerization support
-- CI/CD pipelines with GitHub Actions
+- Clean .NET 8.0 architecture with service layer
+- Entity Framework Core with Code First approach
 - Professional documentation suite
-- Enterprise-grade security and error handling
+- Focus on core business functionality
 
 🏗️ Technical Highlights:
-- Entity Framework Core with optimized queries
-- Dependency injection and async patterns
-- SonarQube code quality integration
-- Production-ready deployment guides
+- Service layer pattern with dependency injection
+- Async data operations and error handling
+- Professional Windows Forms interface
+- Clean architecture without complex DevOps overhead
 
-This release demonstrates professional software engineering
-practices suitable for enterprise environments."
+This release demonstrates clean, maintainable software engineering
+practices perfect for portfolio showcase."
 
-git push origin v1.0.0
+git push origin v1.1.0
 ```
 
 ## 4. GitHub Features'ları etkinleştir
 
 GitHub repository'nde:
 
-- Settings > Actions > Enable GitHub Actions
 - Settings > Pages > Enable GitHub Pages (docs için)
-- Settings > Security > Enable Dependabot alerts
-- Add topics: `dotnet`, `csharp`, `entity-framework`, `windows-forms`, `project-management`
+- Add topics: `dotnet`, `csharp`, `entity-framework`, `windows-forms`, `project-management`, `portfolio`
 
 ## 🎯 Sonuç
 
