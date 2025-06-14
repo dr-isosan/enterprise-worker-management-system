@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerApp", "WorkerApp\WorkerApp.csproj", "{AF337669-30FE-4A74-A867-38F7ADFF5C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerApp.Tests", "WorkerApp.Tests\WorkerApp.Tests.csproj", "{B8F4EE5C-8A2F-4D1E-A5F3-9B6C7E4D2A1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7A8B3C1-2E4D-4A5B-8C9F-1E3F7D6A5B2C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		LICENSE = LICENSE
+		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		.gitignore = .gitignore
+		.editorconfig = .editorconfig
+		sonar-project.properties = sonar-project.properties
+		Dockerfile = Dockerfile
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E9F2A5D3-6B8C-4E7F-9A1D-2C5E8F7B9A3E}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api\README.md = docs\api\README.md
+		docs\deployment\README.md = docs\deployment\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF337669-30FE-4A74-A867-38F7ADFF5C1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF337669-30FE-4A74-A867-38F7ADFF5C1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF337669-30FE-4A74-A867-38F7ADFF5C1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF337669-30FE-4A74-A867-38F7ADFF5C1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8F4EE5C-8A2F-4D1E-A5F3-9B6C7E4D2A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F4EE5C-8A2F-4D1E-A5F3-9B6C7E4D2A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F4EE5C-8A2F-4D1E-A5F3-9B6C7E4D2A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F4EE5C-8A2F-4D1E-A5F3-9B6C7E4D2A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9F2A5D3-6B8C-4E7F-9A1D-2C5E8F7B9A3E} = {F7A8B3C1-2E4D-4A5B-8C9F-1E3F7D6A5B2C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24B6019D-3C31-490E-9F36-0DFC299348B1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,118 @@
+name: Release Automation
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Get version from tag
+      id: get_version
+      run: |
+        $version = $env:GITHUB_REF -replace 'refs/tags/v', ''
+        echo "VERSION=$version" >> $env:GITHUB_OUTPUT
+        echo "Version: $version"
+
+    - name: Restore dependencies
+      run: dotnet restore WorkerApp/WorkerApp.csproj
+
+    - name: Build Release
+      run: dotnet build WorkerApp/WorkerApp.csproj --configuration Release --no-restore
+
+    - name: Run Tests
+      run: dotnet test --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+
+    - name: Publish Self-Contained
+      run: |
+        dotnet publish WorkerApp/WorkerApp.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish-standalone
+
+    - name: Publish Framework-Dependent
+      run: |
+        dotnet publish WorkerApp/WorkerApp.csproj -c Release -r win-x64 --self-contained false -o ./publish-framework
+
+    - name: Create Release Archives
+      run: |
+        Compress-Archive -Path ./publish-standalone/* -DestinationPath "./WorkerManagementSystem-v${{ steps.get_version.outputs.VERSION }}-standalone.zip"
+        Compress-Archive -Path ./publish-framework/* -DestinationPath "./WorkerManagementSystem-v${{ steps.get_version.outputs.VERSION }}-framework.zip"
+
+    - name: Generate Release Notes
+      id: release_notes
+      run: |
+        $notes = @"
+        ## 🎉 Release v${{ steps.get_version.outputs.VERSION }}
+
+        ### 📦 Download Options
+        - **Standalone**: Includes .NET runtime, no prerequisites required
+        - **Framework-dependent**: Requires .NET 8.0 Runtime installed
+
+        ### ✨ What's New
+        - Enhanced performance optimizations
+        - Improved error handling and logging
+        - Updated dependencies for security
+        - Bug fixes and stability improvements
+
+        ### 🔧 Installation
+        1. Download the appropriate package for your setup
+        2. Extract to your desired location
+        3. Run WorkerApp.exe
+
+        ### 📋 System Requirements
+        - Windows 10 version 1809 or later
+        - .NET 8.0 Runtime (for framework-dependent version)
+        - SQL Server 2016+ / SQL Server Express / LocalDB
+
+        ### 🆘 Support
+        If you encounter any issues, please:
+        1. Check the [documentation](https://github.com/yourusername/worker-management-system/tree/main/docs)
+        2. Search [existing issues](https://github.com/yourusername/worker-management-system/issues)
+        3. Create a new issue with detailed information
+
+        ### 📝 Full Changelog
+        See [CHANGELOG.md](https://github.com/yourusername/worker-management-system/blob/main/CHANGELOG.md) for complete details.
+        "@
+
+        $notes | Out-File -FilePath release_notes.txt -Encoding utf8
+        echo "RELEASE_NOTES_FILE=release_notes.txt" >> $env:GITHUB_OUTPUT
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ github.ref }}
+        name: Enterprise Worker Management System v${{ steps.get_version.outputs.VERSION }}
+        body_path: ${{ steps.release_notes.outputs.RELEASE_NOTES_FILE }}
+        draft: false
+        prerelease: false
+        files: |
+          ./WorkerManagementSystem-v${{ steps.get_version.outputs.VERSION }}-standalone.zip
+          ./WorkerManagementSystem-v${{ steps.get_version.outputs.VERSION }}-framework.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update README badges
+      run: |
+        $version = "${{ steps.get_version.outputs.VERSION }}"
+        $content = Get-Content README.md -Raw
+        $content = $content -replace 'https://img\.shields\.io/badge/version-.*?-blue', "https://img.shields.io/badge/version-v$version-blue"
+        $content | Set-Content README.md
+
+    - name: Commit README update
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git diff --staged --quiet || git commit -m "Update version badge to v${{ steps.get_version.outputs.VERSION }}"
+        git push origin HEAD:main || echo "No changes to push"
